@@ -81,7 +81,7 @@ void  resetConfiguration(){
     Serial.println("reset");
     strcpy(ssid, "");         
     strcpy(password, "");
-    To = 230;
+    To = 250;
     Vo = 40;
     Fe = true;
     Tm = 240;
@@ -160,7 +160,7 @@ void loadConfiguration(bool reset=false) {
   Vo = doc["Vo"] | 40;
   //Vo = Vco;
   Fe = doc["Fe"];
-  Tm = doc["Tm"] | 230;
+  Tm = doc["Tm"] | 250;
   Kp = doc["Kp"]?doc["Kp"].as<double>():23.0;
   Ki = doc["Ki"]?doc["Ki"].as<double>():0.043;
   Kd = doc["Kd"]?doc["Kd"].as<double>():160.0;
